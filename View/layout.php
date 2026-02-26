@@ -27,8 +27,8 @@ function MostrarHeader()
         '<div class="page-header">
             <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-danger text-white me-2">
-                    <i class="mdi mdi-car"></i>
-                </span> Bienvenidos al Caso Estudio 01
+                    <i class="mdi mdi-weight-lifter"></i>
+                </span> Bienvenidos al Registro de Ejercicios
             </h3>
         </div>';
 }
@@ -57,6 +57,9 @@ function MostrarJS()
         <script src="../assets/js/misc.js"></script>
         <script src="../assets/js/settings.js"></script>
         <script src="../assets/js/todolist.js"></script>
-        <script src="../assets/js/jquery.cookie.js"></script>';
+        <script src="../assets/js/jquery.cookie.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>';
 }
 ?>

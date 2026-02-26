@@ -24,28 +24,12 @@ MostrarCSS();
                                 <div class="card-body">
                                     <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                                     <h4 class="font-weight-normal mb-3">
-                                        Registro de Vendedores <i class="mdi mdi-login mdi-24px float-end"></i>
+                                        Registro de Ejercicios <i class="mdi mdi-login mdi-24px float-end"></i>
                                     </h4>
-                                    <p class="mb-5">Agrega nuevos vendedores al sistema con su cédula, nombre y correo.</p>
-                                    <a href="#"
+                                    <p class="mb-5">Agrega tus tipos de ejercicios.</p>
+                                    <a href="ejercicio.php"
                                         class="btn btn-gradient-danger btn-rounded btn-fw">
-                                        Ir al Registro
-                                        <i class="mdi mdi-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 stretch-card grid-margin">
-                            <div class="card bg-gradient-info card-img-holder text-white">
-                                <div class="card-body">
-                                    <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                                    <h4 class="font-weight-normal mb-3">
-                                        Registro de Vehículos <i class="mdi mdi-tractor mdi-24px float-end"></i>
-                                    </h4>
-                                    <p class="mb-5">Agrega vehículos indicando marca, modelo, color, precio y vendedor.</p>
-                                    <a href="#"
-                                        class="btn btn-gradient-danger btn-rounded btn-fw">
-                                        Ir al Registro
+                                        Registrar Ejercicio
                                         <i class="mdi mdi-arrow-right"></i>
                                     </a>
                                 </div>
@@ -56,10 +40,10 @@ MostrarCSS();
                                 <div class="card-body">
                                     <img src="../assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                                     <h4 class="font-weight-normal mb-3">
-                                        Consulta de Vehículos <i class="mdi mdi-table-account mdi-24px float-end"></i>
+                                        Consulta de Ejercicios <i class="mdi mdi-table-account mdi-24px float-end"></i>
                                     </h4>
-                                    <p class="mb-5">Visualiza todos los vehículos registrados con su información completa.</p>
-                                    <a href="#"
+                                    <p class="mb-5">Visualiza todos los ejercicios registrados con su información completa.</p>
+                                    <a href="ejercicio-consulta.php"
                                         class="btn btn-gradient-danger btn-rounded btn-fw">
                                         Ver Consulta
                                         <i class="mdi mdi-arrow-right"></i>
