@@ -1,0 +1,49 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_RegistrarEjercicio`(
+	p_Identificacion VARCHAR(15),
+    p_Monto DECIMAL(18,2),
+    p_TipoEjercicio INT
+)
+BEGIN
+    DECLARE v_Cantidad INT;
+    SELECT COUNT(*) INTO v_Cantidad
+    FROM ejercicios
+    WHERE Identificacion = p_Identificacion;
+
+    IF v_Cantidad >= 2 THEN
+        SELECT 'No se pueden registrar más de 2 tipos de ejercicio por persona' AS Mensaje;
+    ELSE
+        INSERT INTO ejercicios (Identificacion,Fecha,Monto,TipoEjercicio)
+        VALUES (p_Identificacion,NOW(),p_Monto,p_TipoEjercicio);
+
+        SELECT 'Ejercicio registrado correctamente' AS Mensaje;
+
+    END IF;
+
+END
+
+
+-----
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ConsultarTiposEjercicio`()
+BEGIN
+	SELECT
+		TipoEjercicio,
+        DescripcionTipoEjercicio
+	FROM tiposejercicio
+    ORDER BY TipoEjercicio;
+END
+
+-----
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ConsultarEjercicios`()
+BEGIN
+    SELECT
+        e.Fecha,
+        e.Monto,
+        t.DescripcionTipoEjercicio,
+        e.Identificacion
+    FROM ejercicios e
+    INNER JOIN tiposejercicio t ON t.TipoEjercicio = e.TipoEjercicio
+    ORDER BY e.Fecha DESC;
+END

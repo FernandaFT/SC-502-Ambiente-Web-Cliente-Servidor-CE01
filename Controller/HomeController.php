@@ -18,9 +18,12 @@ if (isset($_POST["btnRegistrarEjercicio"])) {
     $result = RegistrarEjercicio($identificacion, $monto, $tipoejercicio);
 
     if ($result) {
-        header("Location: ../../View/vHome/ejercicio-consulta.php");
-        exit;
-    } else {
-        $mensaje = "Su información no fue registrada correctamente";
+        $row = $result->fetch_assoc();
+        $mensaje = $row["Mensaje"];
+
+        if ($mensaje == "Ejercicio registrado correctamente") {
+            header("Location: ../../View/vHome/ejercicio-consulta.php");
+            exit;
+        }
     }
 }
